@@ -7,6 +7,7 @@ const path = require('path')
 const app = express()
 let PORT = process.env.PORT || 8080
 
+app.use(cors())
 // app.use(cors(
 //     {
 //         // origin: "https://aborayan.vercel.app",
