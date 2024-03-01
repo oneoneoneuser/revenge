@@ -14,6 +14,12 @@ let PORT = process.env.PORT || 8080
 //         optionSuccessStatus: 200
 //     }
 // ))
+
+//Connect to the database before listening
+connection().then(() => 
+    app.listen(PORT, () => console.log(`SERVER IS RUN ON PORT: http://localhost:${PORT}`))
+})
+
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
@@ -27,8 +33,4 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
 })
 
-//Connect to the database before listening
-connection().then(() => 
-    app.listen(PORT, () => console.log(`SERVER IS RUN ON PORT: http://localhost:${PORT}`))
-})
 
