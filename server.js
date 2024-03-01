@@ -7,24 +7,17 @@ const path = require('path')
 const app = express()
 let PORT = process.env.PORT || 8080
 
-app.use(cors(
-    {
-        origin: 'http://localhost:3000/',
-        credentials: true,
-        optionSuccessStatus: 200
-    }
-))
 // app.use(cors(
 //     {
-//         // origin: "https://aborayan.vercel.app",
-//         origin: "",
-//         methods: ["POST", "GET", "PUT", "DELETE"],
-//         credentials: true
+//         origin: 'http://localhost:5000/',
+//         credentials: true,
+//         optionSuccessStatus: 200
 //     }
 // ))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
+app.use(cors())
 
 app.use('/api/user', require('./routers/UserRoutes'))
 app.use('/api/player', require('./routers/PlayerRoutes'))
