@@ -17,7 +17,7 @@ export const DataProvider = ({ children }) => {
     
     const CheckIfAdmin = async () => {
         try {
-            let res = await axios.get('http://localhost:5000/api/user/userinfo', {
+            let res = await axios.get('https://aborayan.cyclic.app/api/user/userinfo', {
                 headers: { "Authorization": tokenCookie }
             })
             
@@ -31,7 +31,7 @@ export const DataProvider = ({ children }) => {
 
     const getPlayerInfo = async () => {
         try {
-            let res = await axios.get('http://localhost:5000/api/player/playerinfo', {
+            let res = await axios.get('https://aborayan.cyclic.app/api/player/playerinfo', {
                 headers: { "Authorization": tokenCookie }
             })
             
@@ -45,7 +45,7 @@ export const DataProvider = ({ children }) => {
 
     const getAllPlayers = async () => {
         try {
-            let res = await axios.get('http://localhost:5000/api/player/', {
+            let res = await axios.get('https://aborayan.cyclic.app/api/player/', {
                 headers: { "Authorization": tokenCookie }
             })
             
