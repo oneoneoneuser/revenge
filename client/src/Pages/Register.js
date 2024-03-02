@@ -14,7 +14,7 @@ function Register() {
         e.preventDefault()
         setSending(true)
         try {
-            let res = await axios.post('http://localhost:5000/api/user/register', {
+            let res = await axios.post('https://aborayan.cyclic.app/api/user/register', {
                 name: Name,
                 password: Password
             })
