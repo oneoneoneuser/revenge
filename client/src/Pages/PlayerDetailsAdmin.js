@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+https://aborayan.cyclic.appimport React, { useContext, useEffect, useState } from 'react'
 import GlobaleCotext from './GlobalContext'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
@@ -16,7 +16,7 @@ function PlayerDetailsAdmin() {
     let deletePlayer = async e => {
         e.preventDefault()
         try {
-            let res = await axios.delete(`http://localhost:5000/api/player/${params.id}`, {
+            let res = await axios.delete(`https://aborayan.cyclic.app/api/player/${params.id}`, {
                 headers: {
                     'Authorization': tokenCookie
                 }
