@@ -13,7 +13,7 @@ function ChangePassword() {
     const submitHandler = async e => {
         e.preventDefault()
         try {
-            let res = await axios.put('http://localhost:5000/api/user/update_password', {
+            let res = await axios.put('https://aborayan.cyclic.app/api/user/update_password', {
                 password: Password
             }, {
                 headers: {
