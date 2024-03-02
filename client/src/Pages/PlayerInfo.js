@@ -42,7 +42,7 @@ function PlayerInfo() {
     const handleSubmit = async e => {
         e.preventDefault()
         try {
-            let res = await axios.put(`http://localhost:5000/api/player/${params.id}`, {
+            let res = await axios.put(`https://aborayan.cyclic.app/api/player/${params.id}`, {
                 "UID": Attribute0,
                 "اسم_اللاعب": Attribute1,
                 "عدد_الرماه_المدرع": Attribute2,
