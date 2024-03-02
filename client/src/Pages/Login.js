@@ -15,7 +15,7 @@ function Login() {
         e.preventDefault()
         setSending(true)
         try {
-            let res = await axios.post('http://localhost:5000/api/user/login', {
+            let res = await axios.post('https://aborayan.cyclic.app/api/user/login', {
                 name: Name,
                 password: Password
             })
